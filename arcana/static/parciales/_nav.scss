@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap");
+@import url(./_responsive.scss);
+//variables
+$color-logo : whitesmoke;
+$color-hover: #0088a9;
+
+//logo
+@mixin logo_personalizado($color: whitesmoke){
+    h1 {
+        color: $color;
+        font-family: 'Uncial Antiqua', cursive;
+    }   
+    a {
+        background-color: transparent;
+    }
+    .txt-blk {
+        margin-left: -20%;
+        margin-right: 35%;
+        background-color: transparent;
+    }
+    .logo {
+        cursor: pointer;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .logo-img {
+        height: 67px;
+        width: 120px;
+    }
+}
+@mixin barra_de_nav($colorPrincipal: $color-logo,$colorSecundario:$color-hover){
+    .nav_links{
+        list-style: none;
+    }
+    .nav_links li {
+        display: inline-block;
+        padding: 0px 20px;
+    }
+    
+    .nav_links li a {
+        transition: all 0.3s ease 0s;
+    }
+    
+    .nav_links li a:hover {
+        color: $colorSecundario;
+    }
+}
+@mixin lista_de_templates($color:whitesmoke){
+    li, a, button {
+        font-family: 'Caesar Dressing', cursive;
+        font-weight: 500;
+        font-size: 13px;
+        color: $color;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.index {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    @include lista_de_templates($color-logo);
+    @include logo_personalizado();
+    @include barra_de_nav($color-logo,$color-hover);
+}
+
+.post-preview {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    @include lista_de_templates(black);
+    @include logo_personalizado(black);
+    @include barra_de_nav(black,$color-hover);
+}
+
+.rituales {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    @include lista_de_templates(beige);
+    @include logo_personalizado(beige);
+    @include barra_de_nav(beige,$color-hover);
+}
+
+.contacto {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    @include lista_de_templates($color-logo);
+    @include logo_personalizado();
+    @include barra_de_nav($color-logo,$color-hover);
+}
+.experiencia {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    @include lista_de_templates($color-logo);
+    @include logo_personalizado();
+    @include barra_de_nav($color-logo,$color-hover);
+}

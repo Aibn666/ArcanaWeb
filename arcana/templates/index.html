@@ -1,0 +1,40 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Arcana</title>
+</head>
+<body class="pagPri">
+    <header class="index">
+        <div class="logo">
+            <!-- comienza el bloque de imagen-->
+            <img class="logo-img" src="../static/img/logo.png" alt="No se encontro la img deseada.">
+            <!-- fin del bloque de imagen -->
+            <a href="#">
+                <h1 class="txt-blk">Arcana</h1>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a class="txt-blk" href="{% url 'astrologia:astrologia' %}">Astrologia Reflexiva</a></li>
+                <li><a class="txt-blk" href="{% url 'rituales:rituales' %}">Rituales y Pociones</a></li>
+                <li><a class="txt-blk" href="{% url 'comentarios:contactar' %}">Contacto</a></li>
+                <li><a class="txt-blk" href="{% url 'experiencia:experiencia' %}">experiencia</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor">       
+        <div class="portal" id="fuego"></div>
+        <div class="portal" id="agua"></div>
+        <div class="portal" id="tierra"></div>
+        <div class="portal" id="aire"></div>
+        <div class="portalCentral" id="central"><img class="img-arcana"src="../static/img/arcanaImg.png" alt=""></div>
+    </div>
+    <script src="../static/js/main.js"></script>
+</body>
+</html>

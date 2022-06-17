@@ -1,0 +1,35 @@
+@use 'responsive';
+@use 'nav';
+@use 'portales';
+@use 'rituales';
+@use 'postGalery';
+
+
+@mixin formatoPag(){
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.pagPri {
+  @include formatoPag();
+  background-image: url('./img/espacio.jpg');
+}
+.aire {
+  @include formatoPag();
+  background-image: url('./img/aire.webp');
+}
+.tierra {
+  @include formatoPag();
+  background-image: url('./img/bosque.jpg');
+}
+.fuego {
+  @include formatoPag();
+  background-image: url('./img/espacio.jpg');
+}
+.agua {
+  @include formatoPag();
+  background-image: url('./img/espacio.jpg');
+}
+
