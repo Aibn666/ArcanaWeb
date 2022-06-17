@@ -6,6 +6,7 @@ django-ckeditor==5.7.0
 django-import-export==1.2.0
 django-js-asset==2.0.0
 et-xmlfile==1.1.0
+gunicorn==19.9.0
 MarkupPy==1.14
 odfpy==1.4.1
 openpyxl==3.0.10
