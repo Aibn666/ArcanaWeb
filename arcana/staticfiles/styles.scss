@@ -1,0 +1,49 @@
+@use './parciales/nav';
+@use './parciales/arcana';
+@use './parciales/portales';
+@use './parciales/experiencia';
+@use './parciales/form';
+@use './parciales/responsive';
+@use './parciales/modal';
+@use './parciales/astrologia';
+@use './parciales/post';
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("./img/espacio.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.fondo-agua {
+    background-image: url("https://acegif.com/wp-content/gifs/water-6.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.fondo-fuego {
+    background-image: url("https://acegif.com/wp-content/gifs/fire-13.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.fondo-tierra {
+    background-image: url("./img/bosque.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.fondo-aire {
+    background-image: url("https://i.pinimg.com/originals/60/ad/28/60ad28e7dfa78920e0bbf782053b040a.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

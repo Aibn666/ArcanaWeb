@@ -1,1 +1,1 @@
-web: gunicorn arcana.wsgi
+web: gunicorn arcana.wsgi --log-file -
