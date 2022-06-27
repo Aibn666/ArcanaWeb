@@ -1,110 +1,132 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Poppins:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap");
-@import url(./_responsive.scss);
-//variables
-$color-logo : whitesmoke;
-$color-hover: #0088a9;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 
-//logo
-@mixin logo_personalizado($color: whitesmoke){
-    h1 {
-        color: $color;
-        font-family: 'Uncial Antiqua', cursive;
-    }   
-    a {
-        background-color: transparent;
+$color-font: whitesmoke;
+
+.menu {
+    height: 75px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-logo {
+    height: 67.5px;
+    width: 120px;
+    position: absolute;
+    left: 35%;
+    top: -30px;
+
+}
+.nombre {
+    margin-top: -15px;
+    position: absolute;
+    left: 100%;
+}
+.logo {
+    position: relative;
+    display: flex;
+    color: $color-font;
+    font-size: 30px;
+    padding: 0 80px;
+    font-weight: bold;
+    font-family: 'Uncial Antiqua', cursive;
+    cursor: pointer;
+}
+.menu_items {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+.menu_items li {
+    border-radius: 3px;
+    margin: 0 5px;
+    font-family: 'Caesar Dressing', cursive;
+}
+.menu_items li a {
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    text-transform: uppercase;
+    color: $color-font;
+}
+.menu_items li:hover {
+    background-color: rgba(0,0,0,.1);
+}
+.btn_menu {
+    margin-right: 30px;
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+    display: none;
+    color: $color-font;
+}
+ul.show {
+    top:65px;
+}
+@media screen and (max-width:952px){
+    .logo {
+        font-size: 30px;
+        padding-left: 35px;
     }
-    .txt-blk {
-        margin-left: -20%;
-        margin-right: 35%;
-        background-color: transparent;
+    .img-logo {
+        left: 12%;
+        top: -33px;
+    }
+    .menu_items li a {
+        font-size: 16px;
+    }
+}
+
+@media screen and(max-width: 858px){
+    .menu {
+        height:65px;
+    }
+    .btn_menu {
+        display: inline-flex;
+    }
+    .menu_items {
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background-color: rgba(2, 4, 15, 0.726);
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    .menu_items li {
+        margin: 30px 0 0 0;
+        line-height: 30px;  
+    }
+    .menu_items li a {
+        color: $color-font;
+        font-size: 20px;   
+        opacity: 0.7;
+    }
+    .menu_items li:hover {
+        background:none;
+        box-shadow: 0 0 10px $color-font;
+        background-color: rgb(29, 27, 27);
+        transition: 0.5s;
+    }
+    .menu_items li a:hover {
+        color: rgb(250, 180, 29);
+        background-color: rgb(29, 27, 27);
     }
     .logo {
-        cursor: pointer;
-        margin-right: auto;
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
-    .logo-img {
-        height: 67px;
-        width: 120px;
+        font-size: 25px;
+        padding-left: 35px;
     }
 }
-@mixin barra_de_nav($colorPrincipal: $color-logo,$colorSecundario:$color-hover){
-    .nav_links{
-        list-style: none;
+@media  screen and (max-width:585px) and (orientation: landscape) {
+    .menu_items li {
+        margin: 5px 0 0 0;
     }
-    .nav_links li {
-        display: inline-block;
-        padding: 0px 20px;
+    .menu_items {
+        overflow: scroll;
+        height: calc(100% - 65px);
     }
-    
-    .nav_links li a {
-        transition: all 0.3s ease 0s;
-    }
-    
-    .nav_links li a:hover {
-        color: $colorSecundario;
-    }
-}
-@mixin lista_de_templates($color:whitesmoke){
-    li, a, button {
-        font-family: 'Caesar Dressing', cursive;
-        font-weight: 500;
-        font-size: 13px;
-        color: $color;
-        text-decoration: none;
-        cursor: pointer;
-    }
-}
-
-.index {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    justify-content: center;
-    @include lista_de_templates($color-logo);
-    @include logo_personalizado();
-    @include barra_de_nav($color-logo,$color-hover);
-}
-
-.post-preview {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    justify-content: center;
-    @include lista_de_templates(black);
-    @include logo_personalizado(black);
-    @include barra_de_nav(black,$color-hover);
-}
-
-.rituales {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    justify-content: center;
-    @include lista_de_templates(beige);
-    @include logo_personalizado(beige);
-    @include barra_de_nav(beige,$color-hover);
-}
-
-.contacto {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    justify-content: center;
-    @include lista_de_templates($color-logo);
-    @include logo_personalizado();
-    @include barra_de_nav($color-logo,$color-hover);
-}
-.experiencia {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    justify-content: center;
-    @include lista_de_templates($color-logo);
-    @include logo_personalizado();
-    @include barra_de_nav($color-logo,$color-hover);
 }

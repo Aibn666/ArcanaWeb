@@ -1,9 +1,8 @@
 from django.urls import path
-from .views import contactar, verComentarios
+from .views import contactar
 
 
 
 urlpatterns = [
     path('', contactar, name='contactar'),
-    path('verComentarios/', verComentarios, name='verComentarios'),
 ]

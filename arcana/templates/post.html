@@ -1,14 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post</title>
-</head>
-<body>
-    <h1>Post seleccionado en detalle.</h1>
-    <li><a href="{% url 'astrologia:astrologia' %}">Volver a la Galeria</a></li>
-    <li><a href="{% url 'arcanaCentral:arcanaHome' %}">Pagina Principal</a></li>
-</body>
-</html>
+{% extends './astrologia.html' %}
+
+    {% block contenido %}   
+    <div class="contenido">
+        <h4 class="categoria">Categoria</h4>
+        <h1 class="titulo">Titulo</h1>
+        <div class="posteo">
+            <img src="" class="img-post" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iusto mollitia architecto voluptate et assumenda quasi dolore aliquid officiis,
+                 nihil consectetur molestiae commodi incidunt 
+                 perspiciatis porro exercitationem tenetur 
+                 labore in?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit molestiae dolorem iusto, aut deleniti,
+                 velit repudiandae maxime aspernatur amet necessitatibus aperiam labore dolores enim possimus 
+                 ipsum quaerat hic dolore. Atque.</p>
+            <h2 class="autor">Ivan Krysiuk</h2>
+            <span class="fecha">27/06/2022</span>
+        </div>
+    </div>
+
+    {% endblock %}

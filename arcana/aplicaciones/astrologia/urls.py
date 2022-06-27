@@ -1,11 +1,10 @@
 
-from operator import index
 from django.urls import path
-from .views import astrologia, index
+from .views import astrologia, post
 
 
 
 urlpatterns = [
     path('', astrologia, name='astrologia'),
-    path('index/', index, name='index'),
+    path('post/', post, name='post'),
 ]
