@@ -1,8 +1,8 @@
-@use 'responsive';
-@use 'nav';
-@use 'portales';
-@use 'rituales';
-@use 'postGalery';
+@import url(./parciales/_responsive.scss);
+@import url(./parciales/_nav.scss);
+@import url(./parciales/_portales.scss);
+@import url(./parciales/_rituales.scss);
+@import url(./parciales/_postGalery.scss);
 
 
 @mixin formatoPag(){

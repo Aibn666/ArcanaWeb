@@ -1,50 +1,69 @@
 @import url(/_responsive.scss);
-
-@mixin tablet{
-    @media screen and (max-width: 768px){
-      @content;
-    }
-  }
-
-.form-signin {
-    padding-top: 44px;
-}
 .form_card{
-    background: rgba(0, 0, 0, 0.274);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 16px );
-    -webkit-backdrop-filter: blur( 16px );
-    border-radius: 10px;
-    border: 2px solid rgba(228, 109, 12, 0.527);
-    padding: 30px;
-    color: white;
-    width: 50%;
+  background: rgba(0, 0, 0, 0.274);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 16px );
+  -webkit-backdrop-filter: blur( 16px );
+  border-radius: 10px;
+  border: 2px solid rgba(228, 109, 12, 0.527);
+  padding: 30px;
+  color: white;
+  width: 50%;
+  @include tablet{
+    width: 100%;
+    display: flex;
+    padding: 15px;
   }
-  .btn-tamaño{
-    width: 30% !important;
-    background-color: #fe6a18;
-    border: black;
-  }
-  
-  .form-signin{
-    padding-top: 44px;
-  }
-  
-  .fix1{
-    @include tablet{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+}
+.btn-tamaño{
+  width: 30% !important;
+  background-color: #fe6a18;
+  border: black;
 }
 
-.card{
-    margin: 6px;
-    background: #073f504f;
-    color: black;
-box-shadow: 0 8px 32px 0 rgba(19, 20, 20, 0.37);
-backdrop-filter: blur( 2.5px );
--webkit-backdrop-filter: blur( 2.5px );
-border-radius: 7px;
-border: 1px solid rgba(5, 5, 5, 0.18);
+.form-signin{
+  padding-top: 44px;
+}
+
+.fix1{
+  @include tablet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+.fix2{
+  @include laptop{
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+}
+.fix{
+  @include tablet{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100% !important;
+  }
+}
+.fix3{
+  @include tablet{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100% !important;
+  }
+  @include tablet2{
+    justify-content: space-around;
+    flex-direction: row;
+
+  }
+}
+
+.fix4{
+    @include tablet{
+    display: flex;
+    justify-content: center !important;
+  }
 }
