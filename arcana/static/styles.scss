@@ -7,6 +7,7 @@
 @use './parciales/modal';
 @use './parciales/astrologia';
 @use './parciales/post';
+@import './parciales/nav';
 
 *, *:before, *:after {
     margin: 0;
@@ -27,12 +28,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    @include color(black);
 }
 .fondo-fuego {
     background-image: url("https://acegif.com/wp-content/gifs/fire-13.gif");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    @include color(whitesmoke);
 }
 .fondo-tierra {
     background-image: url("./img/bosque.jpg");
@@ -46,4 +49,5 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    @include color(black);
 }

@@ -4,6 +4,19 @@
 
 $color-font: whitesmoke;
 
+@mixin color ($color-nav) {
+    .logo {
+        color: $color-nav;
+    }
+    .menu_items li a {
+        color: $color-nav;
+    }
+    .btn_menu {
+        color: $color-nav;
+    }
+}
+
+
 .menu {
     height: 75px;
     width: 100vw;

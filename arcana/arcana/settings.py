@@ -26,8 +26,8 @@ SECRET_KEY = '@1qf8sk-kfk&#shd+79m&p#bu0z%666_)q+4)3uqg^*%=_c_d6'
 DEBUG = True
 #DEBUG = False
 
-#ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['arcanaweb.herokuapp.com']
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['arcanaweb.herokuapp.com']
 
 
 # Application definition
