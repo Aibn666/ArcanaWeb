@@ -21,7 +21,7 @@ if (boton) {
 }
 if(logo){
     logo.addEventListener('click', e => {
-        location.href = 'http://localhost:8000/'
+        location.href = 'https://arcanaweb.herokuapp.com/'
     })
 }
 if(btn_menu) {
@@ -54,17 +54,16 @@ if(btn_menu) {
 portales.forEach(portal => portal.addEventListener('click', e=>{
     const gate = portal.id
     if (gate == 'agua') {
-        location.href = 'http://localhost:8000/experiencia/'
+        location.href = 'https://arcanaweb.herokuapp.com/experiencia/'
     }
     if (gate == 'fuego') {
-        location.href = 'http://localhost:8000/comentarios/'
+        location.href = 'https://arcanaweb.herokuapp.com/comentarios/'
     }
     if (gate == 'tierra') {
-        location.href = 'http://localhost:8000/rituales/'
+        location.href = 'https://arcanaweb.herokuapp.com/rituales/'
     }
     if (gate == 'aire') {
-        location.href = 'http://localhost:8000/astrologia/'
+        location.href = 'https://arcanaweb.herokuapp.com/astrologia/'
     }
-    console.log(gate)
 }))
 
