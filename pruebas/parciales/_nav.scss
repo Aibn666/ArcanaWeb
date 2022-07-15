@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
+
+@mixin color ($color-nav: black) {
+    color: $color-nav;
+}
+@mixin barra{
+    @media screen and (max-width: 998px){
+      display: contents; 
+    }
+}
+@mixin barra2{
+    @media screen and (max-width: 998px){
+      display: none;
+    }
+}
+@mixin barra3{
+    @media screen and (max-width: 998px){
+      display: block;
+    }
+}
+.logo {
+    display: none;
+    margin-left: 50px;
+    @include barra();
+    font-family: 'Uncial Antiqua', cursive;
+    font-weight: bold;
+    @include color();
+    font-size: 30px;
+}
+.logo2 {
+    @include barra2();
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Uncial Antiqua', cursive;
+    font-weight: bold;
+    @include color();
+    font-size: 30px;
+    margin-left: -4%;
+    cursor: pointer;
+}
+.nav-link {
+    @include color();
+    font-family: 'Caesar Dressing', cursive;
+}
+
+.icon {
+    height: 54px;
+    width: 96px;
+    position: absolute;
+    margin-left: -48px;
+    margin-top: -29px;
+}   
+.navbar-toggler1 {
+    background-color: transparent;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: none;
+    @include barra3();
+} 

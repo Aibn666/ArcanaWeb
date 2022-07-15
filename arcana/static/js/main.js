@@ -1,5 +1,6 @@
 let boton = document.querySelector('.exp-boton')
 
+let newBtn = document.querySelector('.navbar-toggler1')
 let btn_menu = document.querySelector('.btn_menu')
 let arcana = document.querySelector('.img-arcana')
 let portales = document.querySelectorAll('.portal')
@@ -22,6 +23,30 @@ if (boton) {
 if(logo){
     logo.addEventListener('click', e => {
         location.href = 'https://arcanaweb.herokuapp.com/'
+    })
+}
+if(newBtn) {
+    newBtn.addEventListener('click', e => {
+        let menu_items = document.querySelector('.menu_items')
+        let contenedor = document.querySelector('.contenedor')
+        let container = document.querySelector('.container')
+        let contenido = document.querySelector('.contenido')
+        let cont = document.querySelector('.cont')
+        let title = document.querySelector('.title')
+        if (contenedor) {
+            contenedor.classList.toggle('down')
+        }
+        if (container) {
+            container.classList.toggle('down')
+        }
+        if(cont) {
+            cont.classList.toggle('down')
+            title.classList.toggle('down')
+        }
+        if(contenido)
+        contenido.classList.toggle('down')
+        
+    
     })
 }
 if(btn_menu) {

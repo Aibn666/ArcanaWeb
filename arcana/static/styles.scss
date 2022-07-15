@@ -1,13 +1,14 @@
-@use './parciales/nav';
+@use './parciales/navPrueba';
 @use './parciales/arcana';
-@use './parciales/portales';
+@use './parciales/portalesPrueba';
+@use './parciales/carrusel';
 @use './parciales/experiencia';
 @use './parciales/form';
 @use './parciales/responsive';
 @use './parciales/modal';
 @use './parciales/astrologia';
 @use './parciales/post';
-@import './parciales/nav';
+@import './parciales/navPrueba';
 
 *, *:before, *:after {
     margin: 0;
@@ -38,7 +39,7 @@ body {
     @include color(whitesmoke);
 }
 .fondo-tierra {
-    background-image: url("./img/bosque.jpg");
+    background-image: url("https://images.ecestaticos.com/SO76Gh385FUmAbTzasAykTkWkTM=/0x0:2123x1412/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F2e0%2Fa45%2F088%2F2e0a45088dc1c4443ca5cf9518df01bb.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

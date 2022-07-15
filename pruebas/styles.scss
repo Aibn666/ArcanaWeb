@@ -1,0 +1,10 @@
+@use './parciales/carrusel';
+@import './parciales/nav';
+
+.fondo-aire {
+    background-image: url("https://i.pinimg.com/originals/60/ad/28/60ad28e7dfa78920e0bbf782053b040a.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    @include color(black);
+}

@@ -1,0 +1,41 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="https://kit.fontawesome.com/5100bdbfb9.js" crossorigin="anonymous"></script>
+    <title>Arcana</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="logo"><img class="img-logo" src="../static/img/ArcanaDiseño405_Moment1_Moment5.png" alt=""><div class="nombre">Arcana</div></div>
+            <ul class="menu_items">
+                <li><a href="{% url 'astrologia:astrologia' %}">Astrologia</a></li>
+                <li><a href="{% url 'rituales:rituales' %}">Rituales y pociones</a></li>
+                <li><a href="{% url 'comentarios:contactar' %}">Contacto</a></li>
+                <li><a href="{% url 'experiencia:preparativos' %}">Experiencias</a></li>
+            </ul>
+            <span class="btn_menu">
+                <i class="fa fa-bars"></i>
+            </span>
+        </nav>
+    </header>
+    {% block contenido %}
+    <div class="contenedor">       
+        <div class="portalCentral" id="central"><img class="img-arcana" src="../static/img/arcanaImg.png" alt=""></div>
+        <div class="circle">
+            <div class="portal" id="aire"></div>
+            <div class="portal" id="fuego"></div>
+            <div class="portal" id="agua"></div>
+            <div class="portal" id="tierra"></div>
+        </div>
+    </div>
+    {% endblock %}
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
