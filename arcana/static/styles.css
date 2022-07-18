@@ -11,7 +11,7 @@
   font-family: "Uncial Antiqua", cursive;
   font-weight: bold;
   font-size: 30px;
-  color: whitesmoke;
+  color: black;
 }
 @media screen and (max-width: 998px) {
   .logo {
@@ -25,7 +25,7 @@
   align-items: center;
   font-family: "Uncial Antiqua", cursive;
   font-weight: bold;
-  color: whitesmoke;
+  color: black;
   font-size: 30px;
   margin-left: -4%;
   cursor: pointer;
@@ -37,7 +37,7 @@
 }
 
 .nav-link {
-  color: whitesmoke;
+  color: black;
   font-family: "Caesar Dressing", cursive;
 }
 
@@ -529,13 +529,19 @@
 }
 
 .carrusel .punto {
-  width: 2em;
-  height: 2em;
+  width: 1em;
+  height: 1em;
   margin: 1em;
   background-color: rgb(100, 153, 51);
   display: block;
   cursor: pointer;
   border-radius: 50%;
+}
+
+.punto.activate {
+  border: 3px solid black;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .carrusel .puntos {
@@ -869,7 +875,7 @@ p {
   font-family: "Uncial Antiqua", cursive;
   font-weight: bold;
   font-size: 30px;
-  color: whitesmoke;
+  color: black;
 }
 @media screen and (max-width: 998px) {
   .logo {
@@ -883,7 +889,7 @@ p {
   align-items: center;
   font-family: "Uncial Antiqua", cursive;
   font-weight: bold;
-  color: whitesmoke;
+  color: black;
   font-size: 30px;
   margin-left: -4%;
   cursor: pointer;
@@ -895,7 +901,7 @@ p {
 }
 
 .nav-link {
-  color: whitesmoke;
+  color: black;
   font-family: "Caesar Dressing", cursive;
 }
 

@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 
 
-@mixin color ($color-nav: whitesmoke) {
+@mixin color ($color-nav: black) {
     color: $color-nav;
 }
 @mixin barra{

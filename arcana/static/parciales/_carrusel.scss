@@ -111,13 +111,19 @@
 }
 
 .carrusel .punto {
-    width: 2em;
-    height: 2em;
+    width: 1em;
+    height: 1em;
     margin: 1em;
     background-color: rgb(100, 153, 51);
     display: block;
     cursor: pointer;
     border-radius: 50%;
+}
+
+ .punto.activate {
+    border: 3px solid black;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 .carrusel .puntos {
